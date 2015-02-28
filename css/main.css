@@ -1,0 +1,23 @@
+body {
+background-color: #3C0D52;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header {
+  margin-top: 10px;
+  background: #474747 url(../images/bg.jpg);
+  border: 1px solid;
+  border-radius: 3em 1em;
+  box-shadow: 5px 5px 5px;
+}
+
+.title {
+  font: 70px Tahoma, Helvetica, Arial, Sans-Serif;
+  text-align: center;
+  color: #222;
+  text-shadow: 0px 2px 3px #555;
+}
