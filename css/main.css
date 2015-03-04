@@ -1,23 +1,141 @@
 body {
 background-color: #3C0D52;
+background-image: url(../images/bgpattern.gif);
 }
 
 .container {
-  width: 80%;
+  width: 75%;
+  min-width: 400px;
   margin: 0 auto;
 }
 
 .header {
   margin-top: 10px;
-  background: #474747 url(../images/bg.jpg);
-  border: 1px solid;
-  border-radius: 3em 1em;
-  box-shadow: 5px 5px 5px;
+  background: #BDBDBD url(../images/bg.jpg);
+  border-top-left-radius: 3em;
+  border-top-right-radius: 3em;
+  -webkit-border-top-left-radius: 3em;
+  -webkit-border-top-right-radius: 3em;
+  -moz-border-top-left-radius: 3em;
+  -moz-border-top-right-radius: 3em;
+  box-shadow:0px 0px 10px #000000;
 }
 
 .title {
-  font: 70px Tahoma, Helvetica, Arial, Sans-Serif;
+  font: 70px 'Play', Helvetica, Arial, Sans-Serif;
   text-align: center;
-  color: #222;
-  text-shadow: 0px 2px 3px #555;
+  color: #636363;
+  text-shadow: 0px 2px 3px #FFFFFF;
+  overflow: hidden;
+}
+
+.title:hover {
+  color: #4a0a5e;
+}
+
+.topnav {
+  box-shadow:0px 0px 10px #000000;
+}
+
+.topnav ul {
+  background-color: #474747;
+  text-align: center;
+}
+
+.topnav li {
+  display: inline-block;
+  margin-right: -4px;
+  width: 160px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #474747;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+.topnav a {
+    display: block;
+    color: #BDBDBD;
+    text-decoration: none;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.topnav a:hover {
+    color: #FFFFFF;
+    background-color: #6D0F8A;
+}
+
+/*Requires the link for the page I'm on to have a class of "active". Need to ask how that works with php*/
+ .topnav a.active {
+  color: #6D0F8A;
+  cursor: default;
+}
+
+.sidenav {
+  width: 400px;
+  height: 400px;
+  float: left;
+  margin-top: 20px;
+  margin-left: -75px;
+
+  background-color: black;
+  background-image: url(../images/record.png);
+  border-radius: 100%;
+  box-shadow:0px 0px 10px #000000;
+  border: 1px solid black;
+}
+
+.sidenav ul {
+  text-align: center;
+  height: 400px;
+  }
+
+.sidenav li {
+    width: 400px;
+    height: 55px;
+    line-height: 55px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+  }
+
+.sidenav a {
+        display: block;
+        color: #BDBDBD;
+        text-decoration: none;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        border-radius: 100%;
+        -webkit-border-radius: 100%;
+        width: 200px;
+        margin: 0 auto;
+    }
+
+.sidenav a:hover {
+        color: #FFFFFF;
+        background-color: #6D0F8A;
+    }
+
+.middle {
+  background: #BDBDBD url(../images/bg.jpg);
+  width: 100%;
+  min-height: 375px;
+  box-shadow: 0px 12px 10px #000000;
+}
+
+.content {
+  font-size: 5em;
+  height: auto;
+  padding: 10px;
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  background-color: #474747;
+  box-shadow:0px 0px 10px #000000;
+  border-bottom-left-radius: 3em;
+  -webkit-border--bottom-left-radius: 3em;
+  border-bottom-right-radius: 3em;
+  -webkit-border--bottom-right-radius: 3em;
 }
