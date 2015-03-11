@@ -1,0 +1,35 @@
+// main: main.less
+
+.spinpic() {
+-ms-transform: rotate(25deg);
+-webkit-transform: rotate(25deg);
+transform: rotate(25deg);
+-webkit-animation:spin 1.5s ease-in 1;
+-moz-animation:spin 1.5s ease-in 1;
+animation:spin 1.5s ease-in 1;
+}
+
+.spinpic2() {
+  @-moz-keyframes spin { 100% { -moz-transform: rotate(385deg); } }
+  @-webkit-keyframes spin { 100% { -webkit-transform: rotate(385deg); } }
+  @keyframes spin { 100% { -webkit-transform: rotate(385deg); transform:rotate(385deg); } }
+}
+
+.buttonsmall() {
+  display: block;
+  height: 100px;
+  width: 200px;
+  text-align: center;
+  line-height: 100px;
+  background-color: @darkgrey;
+  border-radius: 10px;
+  color: @litegrey;
+  box-shadow:0px 0px 10px #000000;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.buttonsmallhover() {
+  color: #FFFFFF;
+  background-color: @bright;
+}

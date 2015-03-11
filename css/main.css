@@ -1,5 +1,5 @@
 body {
-  background-color: #3C0D52;
+  background-color: #3c0d52;
   background-image: url(../images/bgpattern.gif);
 }
 .container {
@@ -44,21 +44,21 @@ body {
   background-color: #474747;
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
+  font-size: 1em;
 }
 .topnav a {
   display: block;
-  color: #BDBDBD;
-  text-decoration: none;
+  color: #bdbdbd;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
 }
 .topnav a:hover {
   color: #FFFFFF;
-  background-color: #6D0F8A;
+  background-color: #6d0f8a;
 }
 /*Requires link for the page I'm on to have a class of "active". Need to ask how that works with php*/
 .topnav a.active {
-  color: #6D0F8A;
+  color: #6d0f8a;
   cursor: default;
 }
 .sidenav {
@@ -67,6 +67,7 @@ body {
   float: left;
   margin-top: 20px;
   margin-left: -75px;
+  margin-right: 20px;
   background-color: black;
   background-image: url(../images/record.png);
   border-radius: 100%;
@@ -83,11 +84,11 @@ body {
   line-height: 55px;
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
+  font-size: 1em;
 }
 .sidenav a {
   display: block;
-  color: #BDBDBD;
-  text-decoration: none;
+  color: #bdbdbd;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   border-radius: 100%;
@@ -97,7 +98,7 @@ body {
 }
 .sidenav a:hover {
   color: #FFFFFF;
-  background-color: #6D0F8A;
+  background-color: #6d0f8a;
 }
 .middle {
   background: #bdbdbd url(../images/bg.jpg);
@@ -106,15 +107,17 @@ body {
   box-shadow: 0px 12px 10px #000000;
 }
 .content {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
-  letter-spacing: 0.125em;
+  line-height: 1.5em;
   height: auto;
   padding: 10px;
-  color: #008080;
-  background-color: #800080;
+  color: #4a0a5e;
 }
-.footer {
+h1 {
+  font: 2.5em 'Play', Helvetica, Arial, Sans-Serif;
+}
+.bottom {
   width: 100%;
   height: 100px;
   background-color: #474747;
@@ -123,4 +126,93 @@ body {
   -webkit-border--bottom-left-radius: 3em;
   border-bottom-right-radius: 3em;
   -webkit-border--bottom-right-radius: 3em;
+}
+.midcontentwrap {
+  min-height: 237px;
+}
+.button {
+  float: left;
+  margin-top: 50px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+.button a {
+  display: block;
+  height: 100px;
+  width: 200px;
+  text-align: center;
+  line-height: 100px;
+  background-color: #474747;
+  border-radius: 10px;
+  color: #bdbdbd;
+  box-shadow: 0px 0px 10px #000000;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+.button a:hover {
+  color: #FFFFFF;
+  background-color: #6d0f8a;
+}
+.button2 {
+  float: left;
+  margin-right: 15px;
+}
+.button2 a {
+  display: block;
+  height: 100px;
+  width: 200px;
+  text-align: center;
+  line-height: 100px;
+  background-color: #474747;
+  border-radius: 10px;
+  color: #bdbdbd;
+  box-shadow: 0px 0px 10px #000000;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+.button2 a:hover {
+  color: #FFFFFF;
+  background-color: #6d0f8a;
+}
+.polaroid {
+  float: right;
+  width: 200px;
+  -ms-transform: rotate(25deg);
+  -webkit-transform: rotate(25deg);
+  transform: rotate(25deg);
+  -webkit-animation: spin 1.5s ease-in 1;
+  -moz-animation: spin 1.5s ease-in 1;
+  animation: spin 1.5s ease-in 1;
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(385deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(385deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(385deg);
+    transform: rotate(385deg);
+  }
+}
+.infobox {
+  border: solid 2px #3c0d52;
+  border-radius: 15px;
+  background-color: #636363;
+  height: 120px;
+  max-width: 400px;
+  margin: 0 auto;
+  clear: both;
+  overflow: hidden;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+.infobox p {
+  display: block;
 }

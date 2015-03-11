@@ -3,9 +3,10 @@
 
 @import "colors";
 @import "fonts";
+@import "misc";
 
 body {
-background-color: #3C0D52;
+background-color: @bgpurple;
 background-image: url(../images/bgpattern.gif);
 }
 
@@ -17,7 +18,7 @@ background-image: url(../images/bgpattern.gif);
 
 .header {
   margin-top: 10px;
-  background: #BDBDBD url(../images/bg.jpg);
+  background: @litegrey url(../images/bg.jpg);
   border-top-left-radius: 3em;
   border-top-right-radius: 3em;
   -webkit-border-top-left-radius: 3em;
@@ -28,15 +29,15 @@ background-image: url(../images/bgpattern.gif);
 }
 
 .title {
-  font: 70px 'Play', Helvetica, Arial, Sans-Serif;
+  .maintitle();
   text-align: center;
-  color: #636363;
+  color: @midgrey;
   text-shadow: 0px 2px 3px #FFFFFF;
   overflow: hidden;
 }
 
 .title:hover {
-  color: #4a0a5e;
+  color: @accent;
 }
 
 .topnav {
@@ -44,7 +45,7 @@ background-image: url(../images/bgpattern.gif);
 }
 
 .topnav ul {
-  background-color: #474747;
+  background-color: @darkgrey;
   text-align: center;
 }
 
@@ -54,27 +55,25 @@ background-image: url(../images/bgpattern.gif);
   width: 160px;
   height: 40px;
   line-height: 40px;
-  background-color: #474747;
-  font-family: Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
+  background-color: @darkgrey;
+  .navlinks();
 }
 
 .topnav a {
     display: block;
-    color: #BDBDBD;
-    text-decoration: none;
+    color: @litegrey;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
 }
 
 .topnav a:hover {
     color: #FFFFFF;
-    background-color: #6D0F8A;
+    background-color: @bright;
 }
 
 /*Requires link for the page I'm on to have a class of "active". Need to ask how that works with php*/
  .topnav a.active {
-  color: #6D0F8A;
+  color: @bright;
   cursor: default;
 }
 
@@ -84,7 +83,7 @@ background-image: url(../images/bgpattern.gif);
   float: left;
   margin-top: 20px;
   margin-left: -75px;
-
+  margin-right: 20px;
   background-color: black;
   background-image: url(../images/record.png);
   border-radius: 100%;
@@ -101,14 +100,12 @@ background-image: url(../images/bgpattern.gif);
     width: 400px;
     height: 55px;
     line-height: 55px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
+    .navlinks();
   }
 
 .sidenav a {
         display: block;
-        color: #BDBDBD;
-        text-decoration: none;
+        color: @litegrey;
         transition: all 0.5s;
         -webkit-transition: all 0.5s;
         border-radius: 100%;
@@ -119,11 +116,11 @@ background-image: url(../images/bgpattern.gif);
 
 .sidenav a:hover {
         color: #FFFFFF;
-        background-color: #6D0F8A;
+        background-color: @bright;
     }
 
 .middle {
-  background: #BDBDBD url(../images/bg.jpg);
+  background: @litegrey url(../images/bg.jpg);
   width: 100%;
   min-height: 375px;
   box-shadow: 0px 12px 10px #000000;
@@ -133,17 +130,72 @@ background-image: url(../images/bgpattern.gif);
   .sans-serif();
   height: auto;
   padding: 10px;
-  color: @wildcard;
-  background-color: @bright;
+  color: @accent;
 }
 
-.footer {
+h1 {
+  .label();
+}
+
+.bottom {
   width: 100%;
   height: 100px;
-  background-color: #474747;
+  background-color: @darkgrey;
   box-shadow:0px 0px 10px #000000;
   border-bottom-left-radius: 3em;
   -webkit-border--bottom-left-radius: 3em;
   border-bottom-right-radius: 3em;
   -webkit-border--bottom-right-radius: 3em;
+}
+
+ .midcontentwrap {
+  min-height: 237px;
+}
+
+.button{
+  float: left;
+  margin-top: 50px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  a {
+    .buttonsmall();
+  };
+  a:hover {
+    .buttonsmallhover();
+  }
+}
+
+.button2{
+  float: left;
+  margin-right: 15px;
+  a {
+    .buttonsmall();
+  };
+  a:hover {
+    .buttonsmallhover();
+  }
+}
+
+.polaroid {
+float: right;
+width: 200px;
+   .spinpic();
+}
+.spinpic2();
+
+.infobox {
+  border: solid 2px @bgpurple;
+  border-radius: 15px;
+  background-color: @midgrey;
+  height: 120px;
+  max-width: 400px;
+  margin: 0 auto;
+  clear: both;
+  overflow: hidden;
+  padding-top: 15px;
+  padding-left: 15px;
+  p {
+    display: block;
+  }
 }
