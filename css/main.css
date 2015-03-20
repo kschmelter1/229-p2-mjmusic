@@ -1,11 +1,23 @@
+html {
+  height: 100%;
+}
+.wrapper {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  display: table;
+}
 body {
   background-color: #3c0d52;
   background-image: url(../images/bgpattern.gif);
+  height: 100%;
 }
 .container {
   width: 75%;
-  min-width: 400px;
+  max-width: 1300px;
+  min-width: 500px;
   margin: 0 auto;
+  height: auto;
 }
 .header {
   margin-top: 10px;
@@ -56,15 +68,9 @@ body {
   color: #FFFFFF;
   background-color: #6d0f8a;
 }
-/*Requires link for the page I'm on to have a class of "active". Need to ask how that works with php*/
-.topnav a.active {
-  color: #6d0f8a;
-  cursor: default;
-}
 .sidenav {
   width: 400px;
   height: 400px;
-  float: left;
   margin-top: 20px;
   margin-left: -75px;
   margin-right: 20px;
@@ -73,6 +79,7 @@ body {
   border-radius: 100%;
   box-shadow: 0px 0px 10px #000000;
   border: 1px solid black;
+  float: left;
 }
 .sidenav ul {
   text-align: center;
@@ -110,9 +117,15 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
   line-height: 1.5em;
-  height: auto;
+  width: 50%;
   padding: 10px;
   color: #4a0a5e;
+  display: inline-block;
+}
+@media screen and (max-width: 1000px) {
+  .content {
+    width: 90%;
+  }
 }
 h1 {
   font: 2.5em 'Play', Helvetica, Arial, Sans-Serif;
@@ -127,15 +140,8 @@ h1 {
   border-bottom-right-radius: 3em;
   -webkit-border--bottom-right-radius: 3em;
 }
-.midcontentwrap {
-  min-height: 237px;
-}
 .button {
-  float: left;
-  margin-top: 50px;
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-bottom: 15px;
+  margin: 20px auto 20px auto;
 }
 .button a {
   display: block;
@@ -160,10 +166,10 @@ h1 {
 }
 .button2 a {
   display: block;
-  height: 100px;
-  width: 200px;
+  height: 115px;
+  width: 115px;
   text-align: center;
-  line-height: 100px;
+  line-height: 115px;
   background-color: #474747;
   border-radius: 10px;
   color: #bdbdbd;
@@ -175,15 +181,27 @@ h1 {
   color: #FFFFFF;
   background-color: #6d0f8a;
 }
+.maintext {
+  width: 100%;
+  max-width: 500px;
+  min-width: 200px;
+}
 .polaroid {
-  float: right;
-  width: 200px;
+  margin-right: 20%;
+  margin-left: 60%;
+  max-width: 275px;
+  min-width: 175px;
+  width: 50%;
   -ms-transform: rotate(25deg);
   -webkit-transform: rotate(25deg);
   transform: rotate(25deg);
   -webkit-animation: spin 1.5s ease-in 1;
   -moz-animation: spin 1.5s ease-in 1;
   animation: spin 1.5s ease-in 1;
+}
+.polaroid img {
+  width: 100%;
+  height: auto;
 }
 @-moz-keyframes spin {
   100% {
@@ -201,18 +219,138 @@ h1 {
     transform: rotate(385deg);
   }
 }
+.clear {
+  clear: both;
+  height: 10px;
+  width: 80%;
+}
+.infoboxwrap {
+  min-width: 400px;
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
 .infobox {
   border: solid 2px #3c0d52;
   border-radius: 15px;
-  background-color: #636363;
-  height: 120px;
-  max-width: 400px;
-  margin: 0 auto;
-  clear: both;
+  background-color: rgba(140, 140, 140, 0.7);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  box-shadow: 0px 0px 10px #000000;
+  max-height: 115px;
+  display: inline-block;
+  width: 300px;
   overflow: hidden;
-  padding-top: 15px;
-  padding-left: 15px;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 20px;
 }
 .infobox p {
+  color: black;
+  margin-right: 9px;
+  margin-top: 5px;
+}
+.footer {
+  width: 100%;
+  height: 150px;
+  bottom: 0;
+  margin-bottom: -150px;
+  background: -webkit-linear-gradient(180deg, rgba(255, 0, 0, 0), #636363);
+  background: -o-linear-gradient(180deg, rgba(255, 0, 0, 0), #636363);
+  background: -moz-linear-gradient(180deg, rgba(255, 0, 0, 0), #636363);
+  background: linear-gradient(180deg, rgba(255, 0, 0, 0), #636363);
+}
+.footer p {
+  width: 90%;
+  padding-top: 70px;
+  padding-right: 30px;
+  text-align: right;
+  color: #bdbdbd;
+}
+.tablerow {
+  display: table-row;
+  height: 1px;
+}
+.contactbox {
+  background-color: #474747;
+  border-radius: 10px;
+  color: #bdbdbd;
+  box-shadow: 0px 0px 10px #000000;
+  width: 50%;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  width: 280px;
+}
+.contactbox a {
+  text-decoration: underline;
+  color: #bdbdbd;
+}
+/*Gallery CSS*/
+.gallery ul {
+  text-align: center;
+}
+.gallery li {
+  display: inline-block;
+}
+.gallery hr {
+  height: 10px;
+  color: #474747;
+}
+.gallery p {
+  display: inline-block;
+}
+.gallery h1 {
   display: block;
+}
+.gallery img:hover {
+  -ms-transform: rotate(25deg);
+  -webkit-transform: rotate(25deg);
+  transform: rotate(25deg);
+  -webkit-animation: spin 1.5s ease-in 1;
+  -moz-animation: spin 1.5s ease-in 1;
+  animation: spin 1.5s ease-in 1;
+}
+.testimonials {
+  margin-top: 20px;
+}
+.testimonials li {
+  box-shadow: 0px 0px 10px #000000;
+  border-radius: 1em;
+  -webkit-border-radius: 1em;
+}
+.testimonials p {
+  display: inline-block;
+}
+blockquote {
+  font-size: 1.2em;
+  display: inline-block;
+}
+blockquote::before {
+  content: "\201C";
+  font: 2.5em 'Play', Helvetica, Arial, Sans-Serif;
+}
+blockquote::after {
+  content: "\201D";
+  font: 2.5em 'Play', Helvetica, Arial, Sans-Serif;
+}
+.links {
+  margin-top: 20px;
+}
+.links a {
+  text-decoration: underline;
+  font-size: 1.5em;
+  color: #4a0a5e;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  margin: 0 auto;
+}
+.links a:hover {
+  background-color: #6d0f8a;
+  color: white;
+}
+label {
+  display: inline-block;
+  width: 12em;
 }

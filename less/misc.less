@@ -1,5 +1,8 @@
 // main: main.less
 
+@import "colors";
+@import "fonts";
+
 .spinpic() {
 -ms-transform: rotate(25deg);
 -webkit-transform: rotate(25deg);
@@ -21,6 +24,20 @@ animation:spin 1.5s ease-in 1;
   width: 200px;
   text-align: center;
   line-height: 100px;
+  background-color: @darkgrey;
+  border-radius: 10px;
+  color: @litegrey;
+  box-shadow:0px 0px 10px #000000;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.buttonsmall2() {
+  display: block;
+  height: 115px;
+  width: 115px;
+  text-align: center;
+  line-height: 115px;
   background-color: @darkgrey;
   border-radius: 10px;
   color: @litegrey;

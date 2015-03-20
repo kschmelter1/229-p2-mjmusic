@@ -5,15 +5,30 @@
 @import "fonts";
 @import "misc";
 
+html {
+  height: 100%;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  display: table;
+}
+
 body {
 background-color: @bgpurple;
 background-image: url(../images/bgpattern.gif);
+height: 100%;
 }
 
 .container {
   width: 75%;
-  min-width: 400px;
+  max-width: 1300px;
+  min-width: 500px;
   margin: 0 auto;
+  height: auto;
+
 }
 
 .header {
@@ -71,16 +86,11 @@ background-image: url(../images/bgpattern.gif);
     background-color: @bright;
 }
 
-/*Requires link for the page I'm on to have a class of "active". Need to ask how that works with php*/
- .topnav a.active {
-  color: @bright;
-  cursor: default;
-}
+
 
 .sidenav {
   width: 400px;
   height: 400px;
-  float: left;
   margin-top: 20px;
   margin-left: -75px;
   margin-right: 20px;
@@ -89,6 +99,7 @@ background-image: url(../images/bgpattern.gif);
   border-radius: 100%;
   box-shadow:0px 0px 10px #000000;
   border: 1px solid black;
+  float: left;
 }
 
 .sidenav ul {
@@ -128,9 +139,15 @@ background-image: url(../images/bgpattern.gif);
 
 .content {
   .sans-serif();
-  height: auto;
+  width: 50%;
   padding: 10px;
   color: @accent;
+  display: inline-block;
+}
+@media screen and (max-width: 1000px) {
+  .content {
+    width: 90%;
+  }
 }
 
 h1 {
@@ -148,16 +165,10 @@ h1 {
   -webkit-border--bottom-right-radius: 3em;
 }
 
- .midcontentwrap {
-  min-height: 237px;
-}
+
 
 .button{
-  float: left;
-  margin-top: 50px;
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-bottom: 15px;
+  margin: 20px auto 20px auto;
   a {
     .buttonsmall();
   };
@@ -170,32 +181,182 @@ h1 {
   float: left;
   margin-right: 15px;
   a {
-    .buttonsmall();
+    .buttonsmall2();
   };
   a:hover {
     .buttonsmallhover();
   }
 }
 
+.maintext {
+  width: 100%;
+  max-width: 500px;
+  min-width: 200px;
+}
+
+
 .polaroid {
-float: right;
-width: 200px;
+margin-right: 20%;
+margin-left: 60%;
+max-width: 275px;
+min-width: 175px;
+width: 50%;
+
    .spinpic();
+
+   img {
+     width: 100%;
+     height: auto;
+  }
 }
 .spinpic2();
+
+.clear {
+  clear: both;
+  height: 10px;
+  width: 80%;
+}
+
+.infoboxwrap {
+
+  min-width: 400px;
+  margin-top: 20px;
+      width: 100%;
+      text-align: center;
+}
 
 .infobox {
   border: solid 2px @bgpurple;
   border-radius: 15px;
-  background-color: @midgrey;
-  height: 120px;
-  max-width: 400px;
-  margin: 0 auto;
-  clear: both;
+  background-color: rgba(140, 140, 140, 0.7);
+  .sans-serif();
+  box-shadow:0px 0px 10px #000000;
+  max-height: 115px;
+  display: inline-block;
+  width: 300px;
   overflow: hidden;
-  padding-top: 15px;
-  padding-left: 15px;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 20px;
+
   p {
-    display: block;
+    color: black;
+    margin-right: 9px;
+    margin-top: 5px;
   }
+}
+
+.footer {
+  width: 100%;
+  height: 150px;
+  bottom: 0;
+  margin-bottom: -150px;
+  background: -webkit-linear-gradient(180deg,rgba(255,0,0,0),rgba(99,99,99,1));
+  background: -o-linear-gradient(180deg,rgba(255,0,0,0),rgba(99,99,99,1));
+  background: -moz-linear-gradient(180deg,rgba(255,0,0,0),rgba(99,99,99,1));
+  background: linear-gradient(180deg, rgba(255,0,0,0), rgba(99,99,99,1));
+
+  p {
+    width: 90%;
+  padding-top: 70px;
+  padding-right: 30px;
+  text-align: right;
+  color: @litegrey;
+ }
+}
+
+.tablerow {
+  display: table-row;
+  height: 1px;
+}
+
+.contactbox {
+  background-color: @darkgrey;
+  border-radius: 10px;
+  color: @litegrey;
+  box-shadow:0px 0px 10px #000000;
+  width: 50%;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  width: 280px;
+  a {
+    text-decoration: underline;
+    color: @litegrey;
+  };
+}
+
+/*Gallery CSS*/
+.gallery ul {
+  text-align: center;
+}
+.gallery li {
+    display: inline-block;
+}
+.gallery hr {
+  height: 10px;
+  color: @darkgrey;
+
+}
+.gallery p {
+  display: inline-block;
+}
+.gallery h1 {
+  display: block;
+}
+
+.gallery img:hover {
+  .spinpic()
+}
+
+.testimonials {
+  margin-top: 20px;
+  li {
+    box-shadow:0px 0px 10px #000000;
+  border-radius: 1em;
+-webkit-border-radius: 1em;
+     }
+     p {
+       display: inline-block;
+     }
+}
+
+
+blockquote {
+  font-size: 1.2em;
+  display: inline-block;
+}
+
+blockquote::before{
+  content: "\201C";
+  .label();
+
+}
+
+blockquote::after{
+  content: "\201D";
+  .label();
+
+}
+
+.links {
+  margin-top: 20px;
+}
+.links a {
+  text-decoration: underline;
+  font-size: 1.5em;
+color: @accent;
+          transition: all 0.5s;
+          -webkit-transition: all 0.5s;
+          margin: 0 auto;
+}
+
+.links a:hover {
+  background-color: @bright;
+  color: white;
+}
+
+label {
+  display: inline-block;
+  width: 12em;
 }
